@@ -1,18 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxardhbd00b3i"]
+[gd_scene load_steps=7 format=3 uid="uid://dxardhbd00b3i"]
 
 [ext_resource type="Texture2D" uid="uid://bgmfugh5p0dqu" path="res://assets/sprites/UI books & more.png" id="1_0f6b8"]
 [ext_resource type="Script" path="res://scenes/gui/projectile_placeholder.gd" id="1_13hp0"]
 [ext_resource type="Script" path="res://resources/projectiles/projectile_resource.gd" id="3_gwrv4"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sd7n4"]
-atlas = ExtResource("1_0f6b8")
-region = Rect2(437, 352, 9, 15)
-
 [sub_resource type="Resource" id="Resource_yfsf5"]
 script = ExtResource("3_gwrv4")
 type = 0
-iconTexture = SubResource("AtlasTexture_sd7n4")
-affixes = []
+components = []
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v35ji"]
 atlas = ExtResource("1_0f6b8")

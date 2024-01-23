@@ -11,7 +11,7 @@ func _on_projectile_change(proj:ProjectileResource):
 	proj._preload_scene()
 	projectile = proj
 	var tex = $Placeholder/Projectile as TextureRect
-	tex.texture = projectile.iconTexture
+	tex.texture = projectile.icon_texture
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -19,9 +19,9 @@ func _process(_delta):
 
 
 func _on_fire_timer_timeout():
-	if (!projectile.preloadedScene):
+	if (!projectile.preloaded_scene):
 		projectile._preload_scene()
-	var proj:ProjectileBase = projectile.preloadedScene.instantiate() as ProjectileBase
+	var proj:ProjectileBase = projectile.preloaded_scene.instantiate() as ProjectileBase
 	proj.position = $ProjectileSpawnPoint.global_position
 	proj.damage_resource = Damage.new()
 	proj.damage_resource.damage = randi_range(2, 30)

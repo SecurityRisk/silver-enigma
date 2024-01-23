@@ -13,14 +13,24 @@ var dict:Dictionary = {
 
 @export var type:Type
 
-@export var iconTexture:Texture2D
+@export var icon_texture:Texture2D
 
-@export var affixes:Array = []
+# TODO: Remove @export once we implement components
+# This array will be updated whenever something is added or removed
+@export var components:Array = []
 
-var preloadedScene
+# This damage will have side effects as it will be updated
+var damage_resource:Damage = Damage.new()
+
+var preloaded_scene
 
 func _preload_scene():
-	preloadedScene = load(dict.get(type))
-
-func _get_scene():
-	return dict.get(type)
+	preloaded_scene = load(dict.get(type))
+	
+func calculate_flat_damage() -> int:
+	var dms:Array[DamageModifier] = []
+	for component in components:
+		if component is DamageModifier:
+			dms.append(component)
+	damage_resource.damage_modifiers = dms
+	return damage_resource._get_total_damage()
