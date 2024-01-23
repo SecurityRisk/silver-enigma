@@ -28,3 +28,10 @@ func restart_scene_with_params(override_params):
 func get_size():
 	return get_viewport().get_visible_rect().size
 
+func is_off_screen(node:Node2D) -> bool:
+	var viewport_rect:Rect2 = get_viewport().get_visible_rect()
+	var node_position = node.global_position
+	return (node_position.x < viewport_rect.position.x || 
+			node_position.y < viewport_rect.position.y ||
+			node_position.x > viewport_rect.end.x ||
+			node_position.y > viewport_rect.end.y)

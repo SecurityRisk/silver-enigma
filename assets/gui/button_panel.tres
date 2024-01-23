@@ -1,0 +1,19 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://bs6707whdyeld"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_exo4r"]
+load_path = "res://.godot/imported/button_normal.png-a64ec54f2c3099f029cc4bb51dcb90f1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlrt4"]
+atlas = SubResource("CompressedTexture2D_exo4r")
+region = Rect2(0, 0, 96, 96)
+filter_clip = true
+
+[resource]
+texture = SubResource("AtlasTexture_xlrt4")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 96, 96)

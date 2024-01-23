@@ -1,0 +1,20 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://ckkxjc02klddp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m7xam"]
+load_path = "res://.godot/imported/GUI_4x.png-2d3b01078d5772c4a49a665d1cffc33f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlrt4"]
+atlas = SubResource("CompressedTexture2D_m7xam")
+region = Rect2(0, 224, 128, 128)
+filter_clip = true
+
+[resource]
+texture = SubResource("AtlasTexture_xlrt4")
+texture_margin_left = 37.0
+texture_margin_top = 37.0
+texture_margin_right = 37.0
+texture_margin_bottom = 37.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 128, 128)
+draw_center = false

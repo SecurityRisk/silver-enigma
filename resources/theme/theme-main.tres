@@ -1,13 +1,65 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ducfept6pmkkm"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://ducfept6pmkkm"]
 
-[ext_resource type="FontFile" uid="uid://cawekr44fruhm" path="res://assets/fonts/open-sans/open-sans-regular.ttf" id="1_6yttj"]
+[ext_resource type="Texture2D" uid="uid://cvjgx2aimq7mh" path="res://assets/gui/button_disabled.png" id="1_7pw04"]
+[ext_resource type="StyleBox" uid="uid://det45saathflo" path="res://assets/gui/large_panel.tres" id="1_hyqns"]
+[ext_resource type="StyleBox" uid="uid://bs6707whdyeld" path="res://assets/gui/button_panel.tres" id="1_sgx4u"]
+[ext_resource type="FontFile" uid="uid://dc5gwarpf8yi1" path="res://assets/fonts/joystix monospace.otf" id="1_splt3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g5q55"]
+texture = ExtResource("1_7pw04")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 96, 96)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_exo4r"]
+load_path = "res://.godot/imported/button_normal.png-a64ec54f2c3099f029cc4bb51dcb90f1.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlrt4"]
+atlas = SubResource("CompressedTexture2D_exo4r")
+region = Rect2(0, 0, 96, 96)
+filter_clip = true
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jexa4"]
+texture = SubResource("AtlasTexture_xlrt4")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 96, 96)
+modulate_color = Color(0.541176, 0.576471, 0.670588, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipj5a"]
+texture = SubResource("AtlasTexture_xlrt4")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 96, 96)
+modulate_color = Color(0.541176, 0.576471, 0.670588, 1)
 
 [resource]
-default_font = ExtResource("1_6yttj")
+default_font = ExtResource("1_splt3")
 default_font_size = 20
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/constants/outline_size = 3
+Button/styles/disabled = SubResource("StyleBoxTexture_g5q55")
+Button/styles/hover = SubResource("StyleBoxTexture_jexa4")
+Button/styles/normal = ExtResource("1_sgx4u")
+Button/styles/pressed = SubResource("StyleBoxTexture_ipj5a")
 LabelSmall/base_type = &"Label"
+LabelSmall/colors/font_outline_color = Color(0, 0, 0, 1)
+LabelSmall/constants/outline_size = 4
 LabelSmall/font_sizes/font_size = 16
 MarginContainer/constants/margin_bottom = 32
 MarginContainer/constants/margin_left = 32
 MarginContainer/constants/margin_right = 32
 MarginContainer/constants/margin_top = 32
+PanelContainer/styles/panel = ExtResource("1_hyqns")

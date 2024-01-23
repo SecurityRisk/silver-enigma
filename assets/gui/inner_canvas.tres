@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" load_steps=3 format=3 uid="uid://cka0dv4vt0alw"]
+
+[ext_resource type="Texture2D" uid="uid://cwoiibww8cpo8" path="res://assets/gui/GUI_4x.png" id="1_xkef1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4un7o"]
+atlas = ExtResource("1_xkef1")
+region = Rect2(384, 0, 96, 96)
+
+[resource]
+texture = SubResource("AtlasTexture_4un7o")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://5bgka8a1uej7"]
+
+[ext_resource type="Texture2D" uid="uid://bgmfugh5p0dqu" path="res://assets/sprites/UI books & more.png" id="1_ry71b"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c7oii"]
+lifetime_randomness = 0.35
+particle_flag_disable_z = true
+angle_max = 439.4
+spread = 64.853
+initial_velocity_min = 264.7
+initial_velocity_max = 264.7
+gravity = Vector3(0, 0, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5uen5"]
+atlas = ExtResource("1_ry71b")
+region = Rect2(483, 337, 11, 13)
+
+[node name="HitExplosion" type="GPUParticles2D"]
+rotation = 3.14159
+emitting = false
+amount = 7
+process_material = SubResource("ParticleProcessMaterial_c7oii")
+texture = SubResource("AtlasTexture_5uen5")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0

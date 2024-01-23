@@ -1,0 +1,6 @@
+[gd_resource type="Texture2DArray" load_steps=2 format=3 uid="uid://dfhfd5c5lfkpf"]
+
+[sub_resource type="GDScript" id="GDScript_gsv3x"]
+
+[resource]
+script = SubResource("GDScript_gsv3x")

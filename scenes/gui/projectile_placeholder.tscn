@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://dxardhbd00b3i"]
+
+[ext_resource type="Texture2D" uid="uid://bgmfugh5p0dqu" path="res://assets/sprites/UI books & more.png" id="1_0f6b8"]
+[ext_resource type="Script" path="res://scenes/gui/projectile_placeholder.gd" id="1_13hp0"]
+[ext_resource type="Script" path="res://resources/projectiles/projectile_resource.gd" id="3_gwrv4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sd7n4"]
+atlas = ExtResource("1_0f6b8")
+region = Rect2(437, 352, 9, 15)
+
+[sub_resource type="Resource" id="Resource_yfsf5"]
+script = ExtResource("3_gwrv4")
+type = 0
+iconTexture = SubResource("AtlasTexture_sd7n4")
+affixes = []
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v35ji"]
+atlas = ExtResource("1_0f6b8")
+region = Rect2(768, 16, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bviqj"]
+atlas = ExtResource("1_0f6b8")
+region = Rect2(368, 192, 16, 16)
+
+[node name="ProjectilePlaceholder" type="CenterContainer"]
+offset_right = 48.0
+offset_bottom = 48.0
+scale = Vector2(2, 2)
+script = ExtResource("1_13hp0")
+projectile = SubResource("Resource_yfsf5")
+
+[node name="Placeholder" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+texture = SubResource("AtlasTexture_v35ji")
+
+[node name="Projectile" type="TextureRect" parent="Placeholder"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_bviqj")
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 0.081
+autostart = true
+
+[node name="ProjectileSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(47, 47)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_fire_timer_timeout"]

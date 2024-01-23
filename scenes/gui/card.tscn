@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4j3oe5dai4m8"]
+
+[ext_resource type="Texture2D" uid="uid://bgmfugh5p0dqu" path="res://assets/sprites/UI books & more.png" id="1_ndgk3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r7b1"]
+atlas = ExtResource("1_ndgk3")
+region = Rect2(656, 16, 48, 64)
+
+[node name="Card" type="CenterContainer"]
+custom_minimum_size = Vector2(24.09, 0)
+offset_right = 96.0
+offset_bottom = 128.0
+
+[node name="Sprite2D" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(192, 256)
+layout_mode = 2
+texture = SubResource("AtlasTexture_4r7b1")

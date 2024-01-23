@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://csnlqyh35pfgw"]
+
+[ext_resource type="Texture2D" uid="uid://bgmfugh5p0dqu" path="res://assets/sprites/UI books & more.png" id="1_1bcc2"]
+[ext_resource type="Script" path="res://scenes/gameplay/enemies/spider_enemy.gd" id="1_mn6u7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkypn"]
+atlas = ExtResource("1_1bcc2")
+region = Rect2(416, 208, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu6ty"]
+size = Vector2(64, 64)
+
+[node name="Area2D" type="Area2D" groups=["enemies"]]
+collision_layer = 2
+script = ExtResource("1_mn6u7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("AtlasTexture_kkypn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_wu6ty")
+
+[node name="DamageSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(0, -36)
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -12.0
+offset_right = 20.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 8
+text = "xcxvxcc"
+horizontal_alignment = 1
+vertical_alignment = 1
