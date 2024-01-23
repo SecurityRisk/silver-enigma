@@ -8,4 +8,4 @@
   </a>
 </p>
 
-This project was built from the help of the (godot-game-template)[https://github.com/crystal-bit/godot-game-template]
+This project was built from the help of the [godot-game-template](https://github.com/crystal-bit/godot-game-template)
